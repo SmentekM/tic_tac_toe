@@ -23,7 +23,7 @@ while True:
     pole = input('Podaj numer pola: ')
 
     if pole == '1':
-
+#komentarz
         pole_1 = gracz
         print(
             f'{pole_1} | {pole_2} | {pole_3}\n---------\n{pole_4} | {pole_5} | {pole_6}\n---------\n{pole_7} | {pole_8} | {pole_9}\n')
