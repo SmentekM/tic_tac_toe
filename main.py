@@ -23,18 +23,23 @@ while True:
     pole = input('Podaj numer pola: ')
 
     if pole == '1':
+
         pole_1 = gracz
-        print(f'{pole_1} | {pole_2} | {pole_3}\n---------\n{pole_4} | {pole_5} |'
-              f'{pole_6}\n---------\n{pole_7} | {pole_8} | {pole_9}\n')
+        print(
+            f'{pole_1} | {pole_2} | {pole_3}\n---------\n{pole_4} | {pole_5} | {pole_6}\n---------\n{pole_7} | {pole_8} | {pole_9}\n')
+        print('Ruch wykonuje komputer')
         pole_2 = komputer
-        print(f'{pole_1} | {pole_2} | {pole_3}\n---------\n{pole_4} | {pole_5} |'
-              f'{pole_6}\n---------\n{pole_7} | {pole_8} | {pole_9}\n')
-        pole_2 = komputer
+        print(
+            f'{pole_1} | {pole_2} | {pole_3}\n---------\n{pole_4} | {pole_5} | {pole_6}\n---------\n{pole_7} | {pole_8} | {pole_9}\n')
         pole = input('Podaj numer pola: ')
-        if pole != '8':
-            pole_8 = komputer
-            print(f'{pole_1} | {pole_2} | {pole_3}\n---------\n{pole_4} | {pole_5} | '
-                  f'{pole_6}\n---------\n{pole_7} | {pole_8} | {pole_9}\n')
+        if pole == '3':
+            pole_3 = gracz
+            print(
+                f'{pole_1} | {pole_2} | {pole_3}\n---------\n{pole_4} | {pole_5} | {pole_6}\n---------\n{pole_7} | {pole_8} | {pole_9}\n')
+        print('Ruch wykonuje komputer')
+        pole_8 = komputer
+        print(
+            f'{pole_1} | {pole_2} | {pole_3}\n---------\n{pole_4} | {pole_5} | {pole_6}\n---------\n{pole_7} | {pole_8} | {pole_9}\n')
 
     elif pole == '9':
         pole_9 = gracz
