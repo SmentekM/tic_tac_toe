@@ -30,10 +30,19 @@ pole_5 = komputer
 print(f'{pole_1} | {pole_2} | {pole_3}\n---------\n{pole_4} | {pole_5} | {pole_6}\n---------\n{pole_7} | {pole_8} | {pole_9}\n')
 while True:
     pole = input('Podaj numer pola: ')
+    if pole not in '123456789':
+        print('Pole zajete. Wybierz ponownie')
+        continue
+    elif pole == '1' and (pole_1 != '-') or pole == '2' and (pole_2 != '-') or pole == '3' and (pole_3 != '-') \
+            or pole == '4' and (pole_4 != '-') or pole == '5' and (pole_5 != '-') or pole == '6' and (pole_6 != '-') \
+            or pole == '7' and (pole_7 != '-') or pole == '8' and (pole_8 != '-') or pole == '9' and (pole_9 != '-'):
+        print('Pole zajete. Wybierz ponownie')
+        continue
 
     if pole == '1':
 
         pole_1 = gracz
+
         print(
             f'{pole_1} | {pole_2} | {pole_3}\n---------\n{pole_4} | {pole_5} | {pole_6}\n---------\n{pole_7} | {pole_8} | {pole_9}\n')
         print('Ruch wykonuje komputer')
@@ -41,6 +50,7 @@ while True:
         print(
             f'{pole_1} | {pole_2} | {pole_3}\n---------\n{pole_4} | {pole_5} | {pole_6}\n---------\n{pole_7} | {pole_8} | {pole_9}\n')
         pole = input('Podaj numer pola: ')
+
         if pole == '3':
             pole_3 = gracz
             print(
@@ -907,7 +917,7 @@ while True:
         pole_7 == pole_8 == pole_9 == komputer or pole_1 == pole_4 == pole_7 == komputer or\
         pole_2 == pole_5 == pole_8 == komputer or pole_3 == pole_6 == pole_9 == komputer or \
         pole_1 == pole_5 == pole_9 == komputer or pole_3 == pole_5 == pole_7 == komputer:
-        print('Wygrywa komputer!')
+        print('Przegrana!')
         break
     # brak warunku wygrania przeciwnika - niemozliwe
     else:
