@@ -30,8 +30,8 @@ pole_5 = komputer
 print(f'{pole_1} | {pole_2} | {pole_3}\n---------\n{pole_4} | {pole_5} | {pole_6}\n---------\n{pole_7} | {pole_8} | {pole_9}\n')
 while True:
     pole = input('Podaj numer pola: ')
-    if pole not in '123456789':
-        print('Pole zajete. Wybierz ponownie')
+    if int(pole) < 1 or int(pole) > 9:
+        print('Wybrane pole jest z poza zakresu!')
         continue
     elif pole == '1' and (pole_1 != '-') or pole == '2' and (pole_2 != '-') or pole == '3' and (pole_3 != '-') \
             or pole == '4' and (pole_4 != '-') or pole == '5' and (pole_5 != '-') or pole == '6' and (pole_6 != '-') \
